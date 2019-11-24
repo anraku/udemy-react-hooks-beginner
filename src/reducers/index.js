@@ -1,5 +1,3 @@
-import { strictEqual } from "assert";
-
 const events = (state = [], action) => {
   switch (action.type) {
     case 'CREATE_EVENT':
@@ -9,7 +7,7 @@ const events = (state = [], action) => {
         {
           id,
           title: action.title,
-          body: state.body
+          body: action.body
         }
       ]
     case 'DELETE_EVENT':
