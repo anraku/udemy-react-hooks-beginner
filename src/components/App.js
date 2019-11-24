@@ -22,8 +22,7 @@ const App = () => {
     e.preventDefault()
     dispatch({type: 'DELETE_ALL_EVENTS'})
   }
-  console.log(body)
-  console.log(state)
+
   return (
     <div className="container-fluid">
       <h4>イベント作成フォーム</h4>
