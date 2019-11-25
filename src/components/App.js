@@ -1,6 +1,7 @@
 import React, { useState, useReducer } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import reducer from '../reducers/index';
+import Event from './Event';
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, [])
@@ -13,10 +14,6 @@ const App = () => {
 
     setTitle('')
     setBody('')
-  }
-  const deleteEvent = e => {
-    e.preventDefault()
-    dispatch({type: 'DELETE_EVENT'})
   }
   const deleteAllEvents = e => {
     e.preventDefault()
@@ -50,13 +47,8 @@ const App = () => {
           </tr>
         </thead>
         <tbody>
-          {state.map(event => 
-          <tr key={event.id}>
-            <th>{event.id}</th>
-            <th>{event.title}</th>
-            <th>{event.body}</th>
-            <th></th>
-            </tr>
+          {state.map((event, index) =>
+            <Event key={index} event={event} dispatch={dispatch}></Event>
           )}
         </tbody>
       </table>
