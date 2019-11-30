@@ -4,7 +4,7 @@ import AppContext from '../contexts/AppContext'
 import reducer from '../reducers/index';
 import EventForm from './EventForm'
 import Events from './Events'
-import operationLogs from '../reducers/operationLogs';
+import OperationLogs from './OperationLogs'
 
 const App = () => {
   const initialState = {
@@ -18,6 +18,7 @@ const App = () => {
       <div className="container-fluid">
         <EventForm />
         <Events />
+        <OperationLogs />
       </div>
     </AppContext.Provider>
   );

@@ -8,7 +8,6 @@ import {
 import AppContext from '../contexts/AppContext'
 import { timeCurrentIso8601 } from '../utils'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import operationLogs from '../reducers/operationLogs'
 
 const EventForm = () => {
   const { state, dispatch }  = useContext(AppContext)
